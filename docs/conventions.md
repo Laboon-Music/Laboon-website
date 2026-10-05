@@ -68,9 +68,27 @@ page; structural decision → entry in `decisions.md`; new env variable →
   **merge commit** (never squash), so both branches share history.
 - Before pushing: `npm run check` (format + lint + typecheck + tests) and
   `npm run build`. CI runs the same steps.
-- Every PR uses the template (`.github/pull_request_template.md`) and its
-  definition-of-done checklist. `staging` and `main` are protected: CI must
-  be green before merging (setup: [deployment.md](deployment.md#github--branch-protection)).
+- Every PR uses a template and fills it in: what & why, changes, how to
+  test, screenshots (UI), definition of done, deploy notes. Tick what was
+  checked, strike through what doesn't apply. The change type is given by
+  the conventional-commit title, not repeated in the body.
+  - **Feature / fix PRs** → default template
+    (`.github/pull_request_template.md`), loaded automatically.
+  - **Release PRs** (`staging` → `main`) → release template
+    (`.github/PULL_REQUEST_TEMPLATE/release.md`): add `?template=release.md`
+    to the "new PR" URL, or run `/release` in Claude Code.
+- PR titles follow conventional commits (they become the squash commit).
+- With Claude Code:
+  - **`/open-pr`** (feature / fix branch → `staging`): writes the title,
+    fills the default template from the diff, assigns you and opens the PR
+    after your confirmation.
+  - **`/release`** (`staging` → `main`): lists the PRs shipped since the
+    last release, grouped by type, plus the production steps from their
+    deploy notes, fills the release template, assigns you and opens the PR
+    after your confirmation. You still test staging and merge yourself.
+  - Skills live in `.claude/skills/`.
+- `staging` and `main` are protected: a PR with green CI is required
+  (settings: [deployment.md](deployment.md#github--repo-settings)).
 
 ## Dependencies
 
