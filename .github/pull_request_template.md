@@ -8,14 +8,6 @@
 
 <!-- 1–3 sentences: the problem, then the change. Link the ticket if any. -->
 
-## 🏷️ Type
-
-- [ ] ✨ Feature
-- [ ] 🐛 Bug fix
-- [ ] ♻️ Refactor / cleanup
-- [ ] 📝 Docs
-- [ ] 🔧 Chore (deps, CI, tooling)
-
 ## 🔍 Changes
 
 <!-- Key changes grouped by area — reviewers read this first. -->
@@ -38,17 +30,12 @@
 
 ## ✅ Definition of done
 
-<!-- Tick what you checked; strike through (~~like this~~) what doesn't apply. -->
+<!-- CI already blocks the merge if check or build fail. Strike through (~~like this~~) what doesn't apply. -->
 
-- [ ] 📱 Works on **mobile (375 px)** and **desktop**, no horizontal scroll
-- [ ] 🧪 **Unit tests** added/updated — `npm run check` green
-- [ ] 🏗️ `npm run build` green
+- [ ] 📱 Tested on **mobile (375 px)** and **desktop**
+- [ ] 🧪 **Unit tests** added or updated for the change
 - [ ] 📚 **Docs** updated (`docs/`; new env variable → `.env.example` + `deployment.md`)
-- [ ] 🇫🇷 Site texts in **French** ("tu"), in `content/`; code & docs in **English**
-- [ ] 🧩 UI built from the **design system** (`components/ui`, `components/layout`)
-- [ ] ♿ **Accessible**: labels, colour tokens, keyboard, `aria-hidden` on decoration
-- [ ] 🛡️ New public form: `useProtectedForm` + `Honeypot` + `Turnstile` + `checkAntibot()`
-- [ ] 🔐 No secret committed, no personal data in logs or `reportError()`
+- [ ] 🔐 No secret committed, no personal data in logs
 
 ## 🚚 Deploy notes
 

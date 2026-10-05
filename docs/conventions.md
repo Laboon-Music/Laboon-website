@@ -68,9 +68,10 @@ page; structural decision → entry in `decisions.md`; new env variable →
   **merge commit** (never squash), so both branches share history.
 - Before pushing: `npm run check` (format + lint + typecheck + tests) and
   `npm run build`. CI runs the same steps.
-- Every PR uses a template and fills it in: what & why, type, changes, how
-  to test, screenshots (UI), definition of done, deploy notes. Tick what was
-  checked, strike through what doesn't apply.
+- Every PR uses a template and fills it in: what & why, changes, how to
+  test, screenshots (UI), definition of done, deploy notes. Tick what was
+  checked, strike through what doesn't apply. The change type is given by
+  the conventional-commit title, not repeated in the body.
   - **Feature / fix PRs** → default template
     (`.github/pull_request_template.md`), loaded automatically.
   - **Release PRs** (`staging` → `main`) → release template
