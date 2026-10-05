@@ -1,12 +1,7 @@
-import Confidentialite from "@/components/legal/content/fr/Confidentialite";
-import { LegalPageShell } from "@/components/legal/LegalPageShell";
+import { LegalPage, legalMetadata } from "@/components/legal/LegalPage";
 
-export const metadata = { title: "Politique de confidentialité — Laboon" };
+export const metadata = legalMetadata("confidentialite");
 
 export default function Page() {
-  return (
-    <LegalPageShell>
-      <Confidentialite />
-    </LegalPageShell>
-  );
+  return <LegalPage slug="confidentialite" />;
 }

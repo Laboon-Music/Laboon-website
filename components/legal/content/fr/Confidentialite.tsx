@@ -1,4 +1,6 @@
 import { DocHeader, List, Section, Subheading, TodoNote } from "../../_shared";
+import { TextLink } from "@/components/ui";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CONFIDENTIALITE_META = {
   title: "Politique de confidentialité",
@@ -29,9 +31,7 @@ export default function Confidentialite() {
           </p>
           <p>
             Contact DPO / responsable :{" "}
-            <a className="text-brand hover:underline" href="mailto:laboon.app@gmail.com">
-              laboon.app@gmail.com
-            </a>
+            <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>
           </p>
         </Section>
 
@@ -43,7 +43,9 @@ export default function Confidentialite() {
             <li>Mot de passe (stocké sous forme chiffrée, jamais en clair)</li>
             <li>Ville / localisation (pour les recherches de musiciens à proximité)</li>
           </List>
-          <Subheading>Données de profil musical (renseignées volontairement) :</Subheading>
+          <Subheading>
+            Données de profil musical (renseignées volontairement) :
+          </Subheading>
           <List>
             <li>Instrument(s) pratiqué(s)</li>
             <li>Style(s) musical/aux</li>
@@ -62,29 +64,46 @@ export default function Confidentialite() {
 
         <Section title="3. Finalités et bases légales du traitement">
           <List>
-            <li>Création et gestion de votre compte — Base légale : exécution du contrat</li>
+            <li>
+              Création et gestion de votre compte — Base légale : exécution du contrat
+            </li>
             <li>Mise en relation entre musiciens — Base légale : exécution du contrat</li>
-            <li>Amélioration de l&apos;application (analytics) — Base légale : intérêt légitime</li>
-            <li>Emails transactionnels liés au service — Base légale : exécution du contrat</li>
+            <li>
+              Amélioration de l&apos;application (analytics) — Base légale : intérêt
+              légitime
+            </li>
+            <li>
+              Emails transactionnels liés au service — Base légale : exécution du contrat
+            </li>
             <li>Emails marketing / newsletter — Base légale : consentement</li>
           </List>
         </Section>
 
         <Section title="4. Durée de conservation">
           <List>
-            <li>Données de compte : toute la durée d&apos;activité du compte, puis 3 ans après la dernière connexion</li>
-            <li>Données de contact (waitlist) : jusqu&apos;au lancement de l&apos;app, puis 1 an</li>
+            <li>
+              Données de compte : toute la durée d&apos;activité du compte, puis 3 ans
+              après la dernière connexion
+            </li>
+            <li>
+              Données de contact (waitlist) : jusqu&apos;au lancement de l&apos;app, puis
+              1 an
+            </li>
             <li>Données techniques (logs) : 12 mois</li>
           </List>
         </Section>
 
         <Section title="5. Destinataires des données">
           <p>
-            Vos données personnelles ne sont pas vendues à des tiers. Elles peuvent
-            être partagées avec :
+            Vos données personnelles ne sont pas vendues à des tiers. Elles peuvent être
+            partagées avec :
           </p>
           <List>
-            <li>Nos sous-traitants techniques (hébergeur, service d&apos;emailing, protection anti-robots des formulaires du site — Cloudflare Turnstile) dans le cadre de contrats conformes au RGPD</li>
+            <li>
+              Nos sous-traitants techniques (hébergeur, service d&apos;emailing,
+              protection anti-robots des formulaires du site — Cloudflare Turnstile) dans
+              le cadre de contrats conformes au RGPD
+            </li>
             <li>Les autorités compétentes en cas d&apos;obligation légale</li>
           </List>
           <p>
@@ -106,38 +125,33 @@ export default function Confidentialite() {
           </List>
           <p>
             Pour exercer ces droits :{" "}
-            <a className="text-brand hover:underline" href="mailto:contact@laboon.fr">
-              contact@laboon.fr
-            </a>
-            . Vous pouvez également introduire une réclamation auprès de la CNIL
-            (www.cnil.fr).
+            <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>. Vous
+            pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).
           </p>
         </Section>
 
         <Section title="7. Cookies et traceurs">
           <p>
-            L&apos;application mobile Laboon n&apos;utilise pas de cookies. Notre site
-            web mesure son audience avec Vercel Web Analytics, un outil qui ne
-            dépose aucun cookie et ne collecte que des statistiques anonymes et
-            agrégées (pages vues, site de provenance, pays, type d&apos;appareil). Il
-            ne permet pas de vous identifier et ne nécessite donc pas de
-            consentement.
+            L&apos;application mobile Laboon n&apos;utilise pas de cookies. Notre site web
+            mesure son audience avec Vercel Web Analytics, un outil qui ne dépose aucun
+            cookie et ne collecte que des statistiques anonymes et agrégées (pages vues,
+            site de provenance, pays, type d&apos;appareil). Il ne permet pas de vous
+            identifier et ne nécessite donc pas de consentement.
           </p>
         </Section>
 
         <Section title="8. Sécurité">
           <p>
-            Laboon met en œuvre des mesures techniques et organisationnelles
-            appropriées pour protéger vos données (chiffrement, accès restreint,
-            protocoles HTTPS).
+            Laboon met en œuvre des mesures techniques et organisationnelles appropriées
+            pour protéger vos données (chiffrement, accès restreint, protocoles HTTPS).
           </p>
         </Section>
 
         <Section title="9. Modification de la politique">
           <p>
-            Laboon se réserve le droit de modifier la présente politique à tout
-            moment. Toute modification substantielle vous sera notifiée par email ou
-            via une notification dans l&apos;application.
+            Laboon se réserve le droit de modifier la présente politique à tout moment.
+            Toute modification substantielle vous sera notifiée par email ou via une
+            notification dans l&apos;application.
           </p>
         </Section>
       </div>

@@ -1,4 +1,6 @@
 import { DocHeader, List, Section, TodoNote } from "../../_shared";
+import { TextLink } from "@/components/ui";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const MENTIONS_LEGALES_META = {
   title: "Mentions légales",
@@ -12,8 +14,8 @@ export default function MentionsLegales() {
       <DocHeader {...MENTIONS_LEGALES_META} />
 
       <p className="text-muted">
-        Conformément aux articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004
-        pour la Confiance dans l&apos;Économie Numérique (LCEN).
+        Conformément aux articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la
+        Confiance dans l&apos;Économie Numérique (LCEN).
       </p>
 
       <TodoNote>
@@ -25,16 +27,15 @@ export default function MentionsLegales() {
           <p>L&apos;application mobile et le site web Laboon sont édités par :</p>
           <List>
             <li>
-              <strong>Nom / Dénomination sociale</strong> : [Nom complet ou
-              dénomination de la structure juridique]
+              <strong>Nom / Dénomination sociale</strong> : [Nom complet ou dénomination
+              de la structure juridique]
             </li>
             <li>
-              <strong>Forme juridique</strong> : [Entreprise individuelle / SASU /
-              SAS / autre]
+              <strong>Forme juridique</strong> : [Entreprise individuelle / SASU / SAS /
+              autre]
             </li>
             <li>
-              <strong>Adresse</strong> : [Adresse complète du siège social — Lyon,
-              France]
+              <strong>Adresse</strong> : [Adresse complète du siège social — Lyon, France]
             </li>
             <li>
               <strong>SIRET</strong> : [Numéro SIRET une fois l&apos;entreprise
@@ -42,13 +43,10 @@ export default function MentionsLegales() {
             </li>
             <li>
               <strong>Adresse e-mail</strong> :{" "}
-              <a className="text-brand hover:underline" href="mailto:contact@laboon.fr">
-                contact@laboon.fr
-              </a>
+              <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>
             </li>
             <li>
-              <strong>Co-fondateurs</strong> : [Prénom Nom] et Mathieu [Nom de
-              famille]
+              <strong>Co-fondateurs</strong> : [Prénom Nom] et Mathieu [Nom de famille]
             </li>
           </List>
         </Section>
@@ -68,22 +66,21 @@ export default function MentionsLegales() {
 
         <Section title="4. Propriété intellectuelle">
           <p>
-            L&apos;ensemble des éléments constituant l&apos;application Laboon (nom,
-            logo, charte graphique, contenus, logiciels) est protégé par les lois
-            françaises et internationales relatives à la propriété intellectuelle.
+            L&apos;ensemble des éléments constituant l&apos;application Laboon (nom, logo,
+            charte graphique, contenus, logiciels) est protégé par les lois françaises et
+            internationales relatives à la propriété intellectuelle.
           </p>
           <p>
-            La marque « Laboon » est déposée auprès de l&apos;INPI sous les classes
-            Nice 9, 35 et 41. Toute reproduction ou utilisation sans autorisation
-            préalable est interdite.
+            La marque « Laboon » est déposée auprès de l&apos;INPI sous les classes Nice
+            9, 35 et 41. Toute reproduction ou utilisation sans autorisation préalable est
+            interdite.
           </p>
         </Section>
 
         <Section title="5. Liens hypertextes">
           <p>
-            Laboon ne peut être tenu responsable du contenu des sites tiers vers
-            lesquels des liens pourraient pointer depuis l&apos;application ou le site
-            web.
+            Laboon ne peut être tenu responsable du contenu des sites tiers vers lesquels
+            des liens pourraient pointer depuis l&apos;application ou le site web.
           </p>
         </Section>
 

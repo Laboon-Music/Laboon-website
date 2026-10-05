@@ -35,13 +35,7 @@ export function TodoNote({ children }: { children: ReactNode }) {
   );
 }
 
-export function Section({
-  title,
-  children,
-}: {
-  title: string;
-  children: ReactNode;
-}) {
+export function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3">
       <h2 className="text-lg font-semibold text-text">{title}</h2>

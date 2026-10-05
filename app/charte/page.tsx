@@ -1,12 +1,7 @@
-import Charte from "@/components/legal/content/fr/Charte";
-import { LegalPageShell } from "@/components/legal/LegalPageShell";
+import { LegalPage, legalMetadata } from "@/components/legal/LegalPage";
 
-export const metadata = { title: "Charte de Bonne Conduite — Laboon" };
+export const metadata = legalMetadata("charte");
 
 export default function Page() {
-  return (
-    <LegalPageShell>
-      <Charte />
-    </LegalPageShell>
-  );
+  return <LegalPage slug="charte" />;
 }

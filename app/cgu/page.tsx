@@ -1,12 +1,7 @@
-import Cgu from "@/components/legal/content/fr/Cgu";
-import { LegalPageShell } from "@/components/legal/LegalPageShell";
+import { LegalPage, legalMetadata } from "@/components/legal/LegalPage";
 
-export const metadata = { title: "Conditions Générales d'Utilisation — Laboon" };
+export const metadata = legalMetadata("cgu");
 
 export default function Page() {
-  return (
-    <LegalPageShell>
-      <Cgu />
-    </LegalPageShell>
-  );
+  return <LegalPage slug="cgu" />;
 }

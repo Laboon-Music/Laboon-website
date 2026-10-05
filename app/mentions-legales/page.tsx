@@ -1,12 +1,7 @@
-import MentionsLegales from "@/components/legal/content/fr/MentionsLegales";
-import { LegalPageShell } from "@/components/legal/LegalPageShell";
+import { LegalPage, legalMetadata } from "@/components/legal/LegalPage";
 
-export const metadata = { title: "Mentions légales — Laboon" };
+export const metadata = legalMetadata("mentions-legales");
 
 export default function Page() {
-  return (
-    <LegalPageShell>
-      <MentionsLegales />
-    </LegalPageShell>
-  );
+  return <LegalPage slug="mentions-legales" />;
 }
