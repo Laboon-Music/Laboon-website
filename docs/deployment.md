@@ -8,7 +8,8 @@ this page — when in doubt, check the Vercel / Cloudflare dashboards.
 
 1. Merge feature PRs into `staging` → Vercel deploys the **staging** project.
 2. Test on staging (forms, mobile and desktop).
-3. Open a PR `staging` → `main` and merge it with **"Create a merge commit"**
+3. Open a PR `staging` → `main` (Claude Code: `/release`) and merge it
+   with **"Create a merge commit"**
    (never squash) → Vercel deploys **production**.
 
 CI (GitHub Actions, `.github/workflows/ci.yml`) runs lint, typecheck, tests

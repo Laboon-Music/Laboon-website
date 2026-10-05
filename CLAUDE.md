@@ -75,7 +75,7 @@ Run `npm run check` and `npm run build` before declaring work done.
 - `staging` = default branch (staging env), `main` = production.
 - Branch from `staging` (`feat/…`, `fix/…`, `chore/…`), conventional commits,
   PR into `staging`. Release: PR `staging` → `main` with a **merge commit**.
-- Open PRs with the `/open-pr` skill (title + template + assignee).
+- Open PRs with the `/open-pr` skill; release to production with `/release`.
 - No Claude attribution lines in commits or PRs.
 
 ## Environment variables

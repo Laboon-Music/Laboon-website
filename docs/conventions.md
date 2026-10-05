@@ -76,12 +76,17 @@ page; structural decision → entry in `decisions.md`; new env variable →
     (`.github/pull_request_template.md`), loaded automatically.
   - **Release PRs** (`staging` → `main`) → release template
     (`.github/PULL_REQUEST_TEMPLATE/release.md`): add `?template=release.md`
-    to the "new PR" URL, or run
-    `gh pr create --base main --head staging --template release.md`.
+    to the "new PR" URL, or run `/release` in Claude Code.
 - PR titles follow conventional commits (they become the squash commit).
-- With Claude Code, run **`/open-pr`** (`.claude/skills/open-pr/`): it fills
-  the title and the right template from the diff, assigns you and opens the
-  PR after your confirmation.
+- With Claude Code:
+  - **`/open-pr`** (feature / fix branch → `staging`): writes the title,
+    fills the default template from the diff, assigns you and opens the PR
+    after your confirmation.
+  - **`/release`** (`staging` → `main`): lists the PRs shipped since the
+    last release, grouped by type, plus the production steps from their
+    deploy notes, fills the release template, assigns you and opens the PR
+    after your confirmation. You still test staging and merge yourself.
+  - Skills live in `.claude/skills/`.
 - `staging` and `main` are protected: a PR with green CI is required
   (settings: [deployment.md](deployment.md#github--repo-settings)).
 

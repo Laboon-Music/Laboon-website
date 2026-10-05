@@ -1,6 +1,6 @@
 ---
 name: open-pr
-description: Open a GitHub pull request for the current branch on Laboon-Music/Laboon-website — conventional-commit title in English, description filled from the project's PR template (release template for staging → main), assigned to the requesting user. Use whenever the user asks to open/create a PR, submit a pull request, or push their branch for review.
+description: Open a GitHub pull request for the current branch on Laboon-Music/Laboon-website — conventional-commit title in English, description filled from the project's PR template, assigned to the requesting user. Use whenever the user asks to open/create a PR, submit a pull request, or push their branch for review. For a production release (staging → main), use the `release` skill instead.
 ---
 
 # Open a pull request
@@ -13,10 +13,9 @@ explicit yes before pushing or creating anything**, even if the user said
 ## Step 0 — Branch and base
 
 - Current branch: `git branch --show-current`.
-- `staging` → it's a **release**: base `main`, head `staging`, release
-  template (Step 4b). Ask the user to confirm that's what they want.
+- `staging` → stop: that's a release, use the **`/release`** skill.
 - `main` → stop: never open a PR from `main`.
-- Any other branch → base `staging`, default template (Step 4a).
+- Any other branch → base `staging`.
 - Uncommitted changes (`git status --short`): tell the user and ask whether
   to commit them first (conventional commit) or leave them out.
 - `gh auth status` must show the **Algodrill** account active. Otherwise stop
@@ -49,14 +48,13 @@ Format: `type(scope): short description` — it becomes the squash commit on
   `analytics`, `seo`, `security`, `ui`, `docs`, `deployment`, `ci`, `github`,
   `deps`. Omit it if the change is truly cross-cutting.
 - Description: imperative, lowercase, concise, no trailing period.
-- Release PR title: `release: YYYY-MM-DD` (today's date).
 
 ## Step 3 — Ticket
 
 If the branch name or commits carry a ticket key (e.g. `LAB-24`), mention it
 in **What & why**. Never invent one.
 
-## Step 4a — Description from `.github/pull_request_template.md`
+## Step 4 — Description from `.github/pull_request_template.md`
 
 Read the template and fill it in **as-is** — same sections, same order:
 
@@ -77,16 +75,6 @@ Read the template and fill it in **as-is** — same sections, same order:
   docs). `None.` if nothing.
 - Strip the template's HTML comments.
 
-## Step 4b — Release description from `.github/PULL_REQUEST_TEMPLATE/release.md`
-
-- Keep the merge-commit warning.
-- **What ships**: one line per PR merged into `staging` since `main`
-  (`git log --oneline --first-parent origin/main..origin/staging`, PR numbers
-  from the `(#N)` suffixes), as `- #N title`.
-- Leave the checklists unchecked; list in them any production env variable
-  or outside step found in the shipped PRs' deploy notes.
-- Strip the HTML comments.
-
 ## Step 5 — Confirm, push, open
 
 1. Show the exact title and the full description; ask for an explicit yes.
@@ -97,15 +85,14 @@ Read the template and fill it in **as-is** — same sections, same order:
 ```bash
 gh pr create \
   --repo Laboon-Music/Laboon-website \
-  --base <staging|main> \
+  --base staging \
   --head <branch> \
   --title "<title>" \
   --body-file <file> \
   --assignee @me
 ```
 
-4. Give the PR URL back, and remind the merge method: **Squash and merge**
-   for feature PRs, **Create a merge commit** for releases.
+4. Give the PR URL back, and remind the merge method: **Squash and merge**.
 
 ## Rules
 

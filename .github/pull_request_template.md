@@ -1,7 +1,7 @@
 <!--
   Title: conventional commit, e.g. `feat(contact): add a phone field`.
   Base branch: `staging`. Releasing staging → main? Use the release template:
-  add `?template=release.md` to the PR URL, or `gh pr create --template release.md`.
+  run `/release` in Claude Code, or add `?template=release.md` to the PR URL.
 -->
 
 ## 🎯 What & why
