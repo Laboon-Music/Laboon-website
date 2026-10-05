@@ -1,0 +1,34 @@
+import { NextResponse } from "next/server";
+
+// JSON response helpers shared by the API routes.
+// Error messages are shown as-is to visitors, so they are written in French.
+
+export const INVALID_REQUEST_ERROR = "Requête invalide.";
+export const NETWORK_ERROR = "Erreur réseau. Réessaie plus tard.";
+
+export function jsonOk(extra: Record<string, unknown> = {}) {
+  return NextResponse.json({ ok: true, ...extra });
+}
+
+export function jsonError(error: string, status: number) {
+  return NextResponse.json({ error }, { status });
+}
+
+/** Parses a JSON object body; returns null when the body is not a JSON object. */
+export async function readJsonBody<T extends object>(
+  request: Request,
+): Promise<Partial<T> | null> {
+  try {
+    const body: unknown = await request.json();
+    return body && typeof body === "object" && !Array.isArray(body)
+      ? (body as Partial<T>)
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+/** True when running on Vercel / `next start`, false with `next dev` and tests. */
+export function isProduction(): boolean {
+  return process.env.NODE_ENV === "production";
+}

@@ -18,12 +18,7 @@ import MentionsLegales from "./content/fr/MentionsLegales";
 export type Locale = "fr" | "en";
 export const DEFAULT_LOCALE: Locale = "fr";
 
-export type LegalSlug =
-  | "cgu"
-  | "cgv"
-  | "charte"
-  | "confidentialite"
-  | "mentions-legales";
+export type LegalSlug = "cgu" | "cgv" | "charte" | "confidentialite" | "mentions-legales";
 
 type LegalEntry = { metaTitle: string; Component: ComponentType };
 
@@ -45,13 +40,7 @@ export const LEGAL_CONTENT: Partial<Record<Locale, Record<LegalSlug, LegalEntry>
   fr: FR,
 };
 
-export const LEGAL_SLUGS: LegalSlug[] = [
-  "cgu",
-  "cgv",
-  "charte",
-  "confidentialite",
-  "mentions-legales",
-];
+export const LEGAL_SLUGS = Object.keys(FR) as LegalSlug[];
 
 export function isLegalSlug(value: string): value is LegalSlug {
   return (LEGAL_SLUGS as string[]).includes(value);

@@ -1,12 +1,7 @@
-import Cgv from "@/components/legal/content/fr/Cgv";
-import { LegalPageShell } from "@/components/legal/LegalPageShell";
+import { LegalPage, legalMetadata } from "@/components/legal/LegalPage";
 
-export const metadata = { title: "Conditions Générales de Vente — Laboon" };
+export const metadata = legalMetadata("cgv");
 
 export default function Page() {
-  return (
-    <LegalPageShell>
-      <Cgv />
-    </LegalPageShell>
-  );
+  return <LegalPage slug="cgv" />;
 }
