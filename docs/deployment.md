@@ -61,9 +61,9 @@ Account, domain, lists, template and API key are set up — details in
 - The old private repo `Algodrill/Laboon-website` is archived: it keeps the
   pre-move commit and PR history.
 
-### GitHub — repo settings — ✅ done (2026-10-05)
+### GitHub — repo settings
 
-Applied on `Laboon-Music/Laboon-website` (public repo):
+✅ Done (2026-10-05). Applied on `Laboon-Music/Laboon-website` (public repo):
 
 - **Rulesets** `protect-staging` and `protect-main`: pull request required
   (0 approvals), check **"Format, lint, typecheck, test & build"** must pass,

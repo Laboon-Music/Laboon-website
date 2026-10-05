@@ -68,9 +68,18 @@ page; structural decision → entry in `decisions.md`; new env variable →
   **merge commit** (never squash), so both branches share history.
 - Before pushing: `npm run check` (format + lint + typecheck + tests) and
   `npm run build`. CI runs the same steps.
-- Every PR uses the template (`.github/pull_request_template.md`) and its
-  definition-of-done checklist. `staging` and `main` are protected: CI must
-  be green before merging (setup: [deployment.md](deployment.md#github--branch-protection)).
+- Every PR uses a template and fills it in: what & why, type, changes, how
+  to test, screenshots (UI), definition of done, deploy notes. Tick what was
+  checked, strike through what doesn't apply.
+  - **Feature / fix PRs** → default template
+    (`.github/pull_request_template.md`), loaded automatically.
+  - **Release PRs** (`staging` → `main`) → release template
+    (`.github/PULL_REQUEST_TEMPLATE/release.md`): add `?template=release.md`
+    to the "new PR" URL, or run
+    `gh pr create --base main --head staging --template release.md`.
+- PR titles follow conventional commits (they become the squash commit).
+- `staging` and `main` are protected: a PR with green CI is required
+  (settings: [deployment.md](deployment.md#github--repo-settings)).
 
 ## Dependencies
 
