@@ -61,26 +61,26 @@ Account, domain, lists, template and API key are set up — details in
 - The old private repo `Algodrill/Laboon-website` is archived: it keeps the
   pre-move commit and PR history.
 
-### GitHub — branch protection
+### GitHub — repo settings — ✅ done (2026-10-05)
 
-Prevents merging anything whose checks fail (tests, formatting, build).
-Needs a repo admin.
+Applied on `Laboon-Music/Laboon-website` (public repo):
 
-- [ ] GitHub → repo → _Settings → Branches → Add branch ruleset_ (or
-      _Add rule_): name `protect-staging`, target branch `staging`.
-- [ ] Tick **Require a pull request before merging** (approvals: 0 is fine
-      for a small team).
-- [ ] Tick **Require status checks to pass** → add the check
-      **"Format, lint, typecheck, test & build"** (it appears after the CI
-      ran once on a PR).
-- [ ] Tick **Block force pushes**. Save.
-- [ ] Repeat for `main` (`protect-main`).
+- **Rulesets** `protect-staging` and `protect-main`: pull request required
+  (0 approvals), check **"Format, lint, typecheck, test & build"** must pass,
+  no force push, no branch deletion. Edit them in _Settings → Rules →
+  Rulesets_.
+- **Outside users**: Issues, Wiki, Projects and Discussions disabled;
+  _Settings → Moderation options → Interaction limits_ = collaborators only.
+  ⚠️ This limit expires after 6 months (next: **2027-04-05**) — re-enable it.
+- **Actions**: workflows from outside contributors' PRs need approval.
+- **Security**: secret scanning + push protection, Dependabot alerts and
+  security updates enabled.
+- **Organization** `Laboon-Music`: base permission _Read_, contact email
+  `laboon.app@gmail.com`.
 
 ### GitHub — Dependabot
 
 `.github/dependabot.yml` is enough: Dependabot starts opening PRs on its own.
-Optionally, _Settings → Code security_ → enable **Dependabot alerts** to be
-emailed about vulnerable dependencies.
 
 ## 3. Vercel
 
