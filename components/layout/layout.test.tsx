@@ -25,6 +25,7 @@ describe("PageShell", () => {
       "href",
       "/mentions-legales",
     );
+    expect(screen.getByRole("link", { name: "FAQ" })).toHaveAttribute("href", "/faq");
   });
 });
 

@@ -31,6 +31,7 @@ use the `Glow` component).
 | `ButtonLink`                  | Navigation styled as a button     | Wraps `next/link`                                                                                                                             |
 | `buttonClass()`               | Button classes for other elements | e.g. an `<a href="#anchor">`                                                                                                                  |
 | `Card`                        | Surface container                 | `tone="success"` for confirmations                                                                                                            |
+| `Disclosure`                  | Expandable question/answer row    | Native `<details>`: accessible and works without JavaScript; `summary` is the always-visible question                                         |
 | `Field`                       | Visible label wrapping a control  | Gives the control its accessible name                                                                                                         |
 | `Input`, `Textarea`, `Select` | Form controls                     | `tone="card"` (default, inside a Card) or `"page"` (on the page background)                                                                   |
 | `Checkbox`                    | Checkbox with label               | `accent="brand" \| "brand-2"`                                                                                                                 |

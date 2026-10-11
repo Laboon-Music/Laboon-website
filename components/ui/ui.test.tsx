@@ -5,6 +5,7 @@ import {
   ButtonLink,
   buttonClass,
   Card,
+  Disclosure,
   Field,
   FormError,
   Honeypot,
@@ -83,5 +84,13 @@ describe("TextLink", () => {
   it("keeps mailto links in the same tab", () => {
     render(<TextLink href="mailto:a@b.co">mail</TextLink>);
     expect(screen.getByRole("link", { name: "mail" })).not.toHaveAttribute("target");
+  });
+});
+
+describe("Disclosure", () => {
+  it("is a native expandable row, closed by default", () => {
+    render(<Disclosure summary="Question ?">Réponse</Disclosure>);
+    expect(screen.getByText("Question ?").closest("details")).not.toHaveAttribute("open");
+    expect(screen.getByText("Réponse")).toBeInTheDocument();
   });
 });

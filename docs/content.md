@@ -7,11 +7,15 @@ touching the layout.
 | File              | Contains                                                                   |
 | ----------------- | -------------------------------------------------------------------------- |
 | `content/home.ts` | Home page: menu, hero, features, "comment ça marche", final call to action |
+| `content/faq.ts`  | FAQ (website and mobile app): questions and answers, grouped by theme      |
 | `content/site.ts` | Browser tab title, Google description, text shown when the link is shared  |
 
 Other texts: forms (`components/newsletter/SignupForm.tsx`,
 `components/contact/ContactForm.tsx`), contact subjects (`lib/contact.ts`),
 legal documents (`components/legal/content/fr/`).
+
+In `content/faq.ts`, a link inside an answer is written `[label](address)`
+(internal path like `/contact`, `https://…` or `mailto:…`).
 
 ## How to change a text (without a developer)
 
