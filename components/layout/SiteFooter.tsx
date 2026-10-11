@@ -3,6 +3,7 @@ import SocialLinks from "@/components/social/SocialLinks";
 import { CurrentYear } from "./CurrentYear";
 
 const FOOTER_LINKS = [
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
   { href: "/mentions-legales", label: "Mentions légales" },
   { href: "/confidentialite", label: "Confidentialité" },

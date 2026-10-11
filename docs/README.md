@@ -28,6 +28,7 @@ link association files).
 | Feature                                          | Route(s)                                                                            | Doc                                                   |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | Newsletter signup (launch / beta, double opt-in) | `/`, `/api/subscribe`, `/inscription-confirmee`                                     | [newsletter-signup.md](features/newsletter-signup.md) |
+| FAQ (+ app WebView embed)                        | `/faq`, `/faq/embed`                                                                | [faq.md](features/faq.md)                             |
 | Contact form                                     | `/contact`, `/api/contact`                                                          | [contact-form.md](features/contact-form.md)           |
 | Anti-bot protection                              | both forms                                                                          | [antibot.md](features/antibot.md)                     |
 | Social links (Instagram, Facebook)               | footer, contact, confirmation                                                       | [social-links.md](features/social-links.md)           |

@@ -1,6 +1,7 @@
 // Design system entry point: import UI primitives from "@/components/ui".
 export { Button, ButtonLink, buttonClass, type ButtonVariant } from "./Button";
 export { Card } from "./Card";
+export { Disclosure } from "./Disclosure";
 export {
   Checkbox,
   controlClass,
