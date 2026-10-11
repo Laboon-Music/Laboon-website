@@ -96,3 +96,13 @@ changes the stack, the architecture or a convention.
 - **History restarted** (one production commit on `main`, one staging commit
   on top) to drop personal emails from the public history. The old private
   repo `Algodrill/Laboon-website` is archived and keeps the full history.
+
+## 2026-10-11 — FAQ shared by the website and the mobile app
+
+- **One content, two routes**: `/faq` (site chrome, indexed, in the sitemap)
+  and `/faq/embed` (bare, `noindex`) for the app WebView — same pattern as
+  the legal documents, but outside the legal registry because it is not a
+  legal document (no Supabase `legal_document` row).
+- **Texts in `content/faq.ts`** (editable without code); answers support
+  `[label](address)` links through a tiny `RichText` renderer.
+- **`Disclosure`** added to the design system (native `<details>`).

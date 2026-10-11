@@ -5,7 +5,13 @@ export const SITE_URL = "https://www.laboon-app.com";
 export const PROD_HOSTS = ["www.laboon-app.com", "laboon-app.com"];
 
 /** Paths never worth indexing, even in production. */
-const NOINDEX_PATHS = ["/api/", "/legal/", "/reset-password", "/inscription-confirmee"];
+const NOINDEX_PATHS = [
+  "/api/",
+  "/legal/",
+  "/faq/embed",
+  "/reset-password",
+  "/inscription-confirmee",
+];
 
 export function isProductionHost(host: string | null | undefined): boolean {
   return !!host && PROD_HOSTS.includes(host);
