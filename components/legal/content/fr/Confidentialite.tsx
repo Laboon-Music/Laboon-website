@@ -1,32 +1,24 @@
-import { DocHeader, List, Section, Subheading, TodoNote } from "../../_shared";
+import { DocHeader, List, Section, Subheading } from "../../_shared";
 import { TextLink } from "@/components/ui";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CONFIDENTIALITE_META = {
-  title: "Politique de confidentialité",
-  version: "1.0",
-  effectiveDate: "[Date de lancement de l'application]",
+  title: "Politique de Confidentialité",
+  version: "1.1",
+  effectiveDate: "12/10/2026",
 };
-
 export default function Confidentialite() {
   return (
     <article className="space-y-8">
-      <DocHeader {...CONFIDENTIALITE_META} />
-
+      <DocHeader {...CONFIDENTIALITE_META} locale="fr" />
       <p className="text-muted">
-        Conformément au Règlement (UE) 2016/679 (RGPD) et à la loi Informatique et
-        Libertés modifiée.
+        Conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil (RGPD)
+        et à la loi Informatique et Libertés modifiée.
       </p>
-
-      <TodoNote>
-        Les zones entre [crochets] sont à compléter avant toute publication.
-      </TodoNote>
-
       <div className="space-y-6 text-muted">
         <Section title="1. Identité du responsable de traitement">
           <p>
-            [Nom / dénomination sociale], co-fondateurs de Laboon, sont responsables
-            conjoints du traitement des données personnelles collectées via
+            Laboon est responsable du traitement des données personnelles collectées via
             l&apos;application.
           </p>
           <p>
@@ -34,7 +26,6 @@ export default function Confidentialite() {
             <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>
           </p>
         </Section>
-
         <Section title="2. Données collectées">
           <Subheading>Lors de l&apos;inscription :</Subheading>
           <List>
@@ -61,7 +52,6 @@ export default function Confidentialite() {
             <li>Type d&apos;appareil et système d&apos;exploitation</li>
           </List>
         </Section>
-
         <Section title="3. Finalités et bases légales du traitement">
           <List>
             <li>
@@ -78,7 +68,6 @@ export default function Confidentialite() {
             <li>Emails marketing / newsletter — Base légale : consentement</li>
           </List>
         </Section>
-
         <Section title="4. Durée de conservation">
           <List>
             <li>
@@ -92,7 +81,6 @@ export default function Confidentialite() {
             <li>Données techniques (logs) : 12 mois</li>
           </List>
         </Section>
-
         <Section title="5. Destinataires des données">
           <p>
             Vos données personnelles ne sont pas vendues à des tiers. Elles peuvent être
@@ -100,9 +88,8 @@ export default function Confidentialite() {
           </p>
           <List>
             <li>
-              Nos sous-traitants techniques (hébergeur, service d&apos;emailing,
-              protection anti-robots des formulaires du site — Cloudflare Turnstile) dans
-              le cadre de contrats conformes au RGPD
+              Nos sous-traitants techniques (hébergeur, service d&apos;emailing) dans le
+              cadre de contrats conformes au RGPD
             </li>
             <li>Les autorités compétentes en cas d&apos;obligation légale</li>
           </List>
@@ -111,7 +98,6 @@ export default function Confidentialite() {
             appropriées (clauses contractuelles types de la Commission européenne).
           </p>
         </Section>
-
         <Section title="6. Vos droits">
           <p>Conformément au RGPD, vous disposez des droits suivants :</p>
           <List>
@@ -125,28 +111,26 @@ export default function Confidentialite() {
           </List>
           <p>
             Pour exercer ces droits :{" "}
-            <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>. Vous
-            pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).
+            <TextLink href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</TextLink>
+          </p>
+          <p>
+            Vous pouvez également introduire une réclamation auprès de la CNIL (
+            <TextLink href="https://www.cnil.fr">www.cnil.fr</TextLink>).
           </p>
         </Section>
-
         <Section title="7. Cookies et traceurs">
           <p>
             L&apos;application mobile Laboon n&apos;utilise pas de cookies. Notre site web
-            mesure son audience avec Vercel Web Analytics, un outil qui ne dépose aucun
-            cookie et ne collecte que des statistiques anonymes et agrégées (pages vues,
-            site de provenance, pays, type d&apos;appareil). Il ne permet pas de vous
-            identifier et ne nécessite donc pas de consentement.
+            peut utiliser des traceurs à des fins analytiques. Un bandeau de consentement
+            vous sera présenté lors de votre première visite.
           </p>
         </Section>
-
         <Section title="8. Sécurité">
           <p>
             Laboon met en œuvre des mesures techniques et organisationnelles appropriées
             pour protéger vos données (chiffrement, accès restreint, protocoles HTTPS).
           </p>
         </Section>
-
         <Section title="9. Modification de la politique">
           <p>
             Laboon se réserve le droit de modifier la présente politique à tout moment.

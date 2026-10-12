@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Locale } from "./registry";
 
 /**
  * Shared building blocks for legal document bodies. Each document component
@@ -11,16 +12,20 @@ export function DocHeader({
   title,
   version,
   effectiveDate,
+  locale = "fr",
 }: {
   title: string;
   version: string;
   effectiveDate: string;
+  locale?: Locale;
 }) {
   return (
     <header>
       <h1 className="text-3xl font-bold text-text">{title}</h1>
       <p className="mt-2 text-sm text-muted">
-        Version {version} — en vigueur à compter du {effectiveDate}
+        {locale === "en"
+          ? `Version ${version} — effective from ${effectiveDate}`
+          : `Version ${version} — en vigueur à compter du ${effectiveDate}`}
       </p>
     </header>
   );
