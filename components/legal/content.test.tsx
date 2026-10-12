@@ -1,11 +1,15 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { CONTACT_EMAIL } from "@/lib/site";
-import { getLegalDoc, LEGAL_SLUGS } from "./registry";
+import { getLegalDoc, LEGAL_SLUGS, type Locale } from "./registry";
 
 describe("legal documents content", () => {
-  it.each(LEGAL_SLUGS)("%s only uses the official contact address", (slug) => {
-    const { Component } = getLegalDoc("fr", slug).entry;
+  const cases = (["fr", "en"] as Locale[]).flatMap((locale) =>
+    LEGAL_SLUGS.map((slug) => [locale, slug] as const),
+  );
+
+  it.each(cases)("%s/%s only uses the official contact address", (locale, slug) => {
+    const { Component } = getLegalDoc(locale, slug).entry;
     const { container } = render(<Component />);
     // Scan each text node separately (textContent glues adjacent blocks).
     const emails: string[] = [];

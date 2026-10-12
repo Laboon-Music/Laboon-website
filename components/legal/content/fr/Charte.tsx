@@ -4,15 +4,13 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CHARTE_META = {
   title: "Charte de Bonne Conduite",
-  version: "1.0",
-  effectiveDate: "[Date de lancement]",
+  version: "1.1",
+  effectiveDate: "12/10/2026",
 };
-
 export default function Charte() {
   return (
     <article className="space-y-8">
-      <DocHeader {...CHARTE_META} />
-
+      <DocHeader {...CHARTE_META} locale="fr" />
       <div className="space-y-6 text-muted">
         <Section title="Notre vision">
           <p>
@@ -26,7 +24,6 @@ export default function Charte() {
             membre de Laboon s&apos;engage à respecter.
           </p>
         </Section>
-
         <Section title="1. Respect et bienveillance">
           <p>
             La scène musicale est un espace de création et de partage. Sur Laboon, chaque
@@ -66,7 +63,6 @@ export default function Charte() {
             </li>
           </List>
         </Section>
-
         <Section title="2. Authenticité et honnêteté">
           <p>
             La confiance est la base de toute collaboration musicale. Un profil
@@ -98,7 +94,6 @@ export default function Charte() {
             </li>
           </List>
         </Section>
-
         <Section title="3. Utilisation de la messagerie">
           <p>
             La messagerie Laboon est un outil de mise en relation musicale — pas un canal
@@ -132,7 +127,6 @@ export default function Charte() {
             </li>
           </List>
         </Section>
-
         <Section title="4. Contenus publiés">
           <p>
             Tout ce que tu publies sur Laboon — profil, photos, liens, messages — engage
@@ -166,7 +160,6 @@ export default function Charte() {
             <li>Faire la promotion de services, produits ou plateformes concurrentes</li>
           </List>
         </Section>
-
         <Section title="5. Vie privée et données personnelles">
           <p>
             Sur Laboon, tu partages des informations sur toi. Nous te demandons de faire
@@ -197,7 +190,6 @@ export default function Charte() {
             </li>
           </List>
         </Section>
-
         <Section title="6. Signalement et modération">
           <Subheading>Comment signaler ?</Subheading>
           <p>
@@ -230,7 +222,6 @@ export default function Charte() {
             illicite (menaces, harcèlement caractérisé, contenus illégaux).
           </p>
         </Section>
-
         <Section title="7. Engagement de la communauté">
           <p>
             Cette charte n&apos;est pas qu&apos;un ensemble de règles — c&apos;est le
