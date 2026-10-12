@@ -41,7 +41,8 @@ for its "Version … — effective from …" line.
 Every document shows a version and an effective date (`*_META` in each
 component). **Bump both in the French and English file whenever the text
 changes** — the app's "documents updated" popup is driven by the version
-published in `legal_document` (Supabase). Current: v1.1, 12/10/2026.
+published in `legal_document` (Supabase). Versions are **integers**, matching the integer `version` column of
+`legal_document`. Current: version 2, 12/10/2026.
 
 ## Content status
 

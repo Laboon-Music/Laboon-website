@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CONFIDENTIALITE_META = {
   title: "Politique de Confidentialité",
-  version: "1.1",
+  version: "2",
   effectiveDate: "12/10/2026",
 };
 export default function Confidentialite() {
