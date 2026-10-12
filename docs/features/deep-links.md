@@ -13,9 +13,10 @@ the app repo (`Laboon/docs/deeplinks/`) — **keep both in sync**.
 
 App ids: `com.laboon.app` (prod), `com.laboon.app.staging` (staging).
 
+Apple Team ID: `4UD73H55CM` (appIDs are `<TeamID>.<BundleID>`).
+
 ## Pending (ticket APP-19)
 
-- Real Apple Team ID (placeholder `TEAM_ID`) — without it iOS ignores the links.
 - Android release SHA-256 fingerprints for prod and staging (placeholders
   `REPLACE_WITH_…`). Only the staging debug key is set.
 

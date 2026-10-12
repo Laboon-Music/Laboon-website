@@ -12,6 +12,14 @@ describe("deep link association files", () => {
     );
   });
 
+  it("declares prod and staging iOS app ids with the real Team ID", async () => {
+    const { applinks } = await appleAssociation().json();
+    expect(applinks.details[0].appIDs).toEqual([
+      "4UD73H55CM.com.laboon.app",
+      "4UD73H55CM.com.laboon.app.staging",
+    ]);
+  });
+
   it("serves the Android asset links for both app flavors", async () => {
     const links = await assetLinks().json();
     expect(

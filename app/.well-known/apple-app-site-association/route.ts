@@ -5,10 +5,8 @@ import { NextResponse } from "next/server";
 // Canonical reference: Laboon/docs/deeplinks/apple-app-site-association
 // Keep both files in sync.
 //
-// TODO (ticket APP-19): replace TEAM_ID with the real Apple Team ID
-// (10 chars, Apple Developer -> Membership). Without it, iOS will not validate
-// the Universal Links and the link will open Safari instead of the app.
-const APPLE_TEAM_ID = "TEAM_ID";
+// Apple Team ID (Apple Developer -> Membership). appIDs are `<TeamID>.<BundleID>`.
+const APPLE_TEAM_ID = "4UD73H55CM";
 
 const AASA = {
   applinks: {

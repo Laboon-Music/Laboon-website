@@ -5,7 +5,7 @@ Things deliberately left for later. Move an item to `decisions.md` once done.
 ## Before public launch
 
 - [ ] Fill `[à compléter]` placeholders in the legal documents.
-- [ ] Deep links: real Apple Team ID + Android release SHA-256 (ticket APP-19,
+- [ ] Deep links: Android release SHA-256 (ticket APP-19,
       [deep-links.md](features/deep-links.md)).
 - [ ] Finish the manual setup checklist in [deployment.md](deployment.md)
       (Sentry, branch protection, Turnstile, contact inbox…).
