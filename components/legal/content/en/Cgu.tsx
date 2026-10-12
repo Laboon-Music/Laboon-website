@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CGU_META = {
   title: "Terms of Use",
-  version: "1.1",
+  version: "2",
   effectiveDate: "12 October 2026",
 };
 export default function Cgu() {

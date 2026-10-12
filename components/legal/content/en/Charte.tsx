@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CHARTE_META = {
   title: "Code of Conduct",
-  version: "1.1",
+  version: "2",
   effectiveDate: "12 October 2026",
 };
 export default function Charte() {

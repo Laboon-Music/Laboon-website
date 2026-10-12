@@ -4,7 +4,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CGV_META = {
   title: "Terms of Sale",
-  version: "1.1",
+  version: "2",
   effectiveDate: "12 October 2026",
 };
 export default function Cgv() {
