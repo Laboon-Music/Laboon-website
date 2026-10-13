@@ -57,14 +57,14 @@ Account, domain, lists, template and API key are set up — details in
 
 ## 2. GitHub — ✅ done (2026-06-14, moved 2026-10-05)
 
-- Repo `Laboon-Music/Laboon-website` (public, in the `Laboon-Music`
+- Repo `Laboon-Music/website` (public, in the `Laboon-Music`
   organization), branches `main` and `staging`.
 - The old private repo `Algodrill/Laboon-website` is archived: it keeps the
   pre-move commit and PR history.
 
 ### GitHub — repo settings
 
-✅ Done (2026-10-05). Applied on `Laboon-Music/Laboon-website` (public repo):
+✅ Done (2026-10-05). Applied on `Laboon-Music/website` (public repo):
 
 - **Rulesets** `protect-staging` and `protect-main`: pull request required
   (0 approvals), check **"Format, lint, typecheck, test & build"** must pass,

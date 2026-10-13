@@ -1,6 +1,6 @@
 ---
 name: release
-description: Prepare a production release of the Laboon website — open the pull request staging → main on Laboon-Music/Laboon-website with a dated title, the list of changes shipped since the last release and the release checklist, assigned to the requesting user. Use whenever the user asks to release, ship, deploy or put the site in production ("mettre en prod", "MEP").
+description: Prepare a production release of the Laboon website — open the pull request staging → main on Laboon-Music/website with a dated title, the list of changes shipped since the last release and the release checklist, assigned to the requesting user. Use whenever the user asks to release, ship, deploy or put the site in production ("mettre en prod", "MEP").
 ---
 
 # Release staging → main
@@ -16,14 +16,14 @@ it**. Merging stays with the user — never merge the release PR yourself.
 - `git fetch origin main staging`.
 - Nothing to release (`git log --oneline origin/main..origin/staging` is
   empty)? Say so and stop.
-- A release PR already open (`gh pr list --repo Laboon-Music/Laboon-website
+- A release PR already open (`gh pr list --repo Laboon-Music/website
 --base main --head staging --state open`)? Show its URL and offer to refresh
   its description instead of opening a second one.
 - Staging health — report, don't block, but flag anything not green:
-  - CI on the `staging` tip: `gh run list --repo Laboon-Music/Laboon-website
+  - CI on the `staging` tip: `gh run list --repo Laboon-Music/website
 --branch staging --limit 1 --json status,conclusion`.
   - Vercel staging deployment of that commit:
-    `gh api repos/Laboon-Music/Laboon-website/commits/<sha>/status --jq
+    `gh api repos/Laboon-Music/website/commits/<sha>/status --jq
 '.statuses[] | select(.context | endswith("staging")) | .state'`.
 
 ## Step 1 — What ships
@@ -33,7 +33,7 @@ git log --first-parent --format='%H %s' origin/main..origin/staging
 ```
 
 - Each squash-merged PR is one commit ending in `(#N)`. For each one, read
-  the PR: `gh pr view N --repo Laboon-Music/Laboon-website --json
+  the PR: `gh pr view N --repo Laboon-Music/website --json
 number,title,body,author`.
 - Commits without `(#N)` (direct commits, merges of `main` back into
   `staging`): list them as plain commits, or skip pure merge commits.
@@ -74,7 +74,7 @@ Vercel project (#N)`); if there is none, strike through the env-variable
 
 ```bash
 gh pr create \
-  --repo Laboon-Music/Laboon-website \
+  --repo Laboon-Music/website \
   --base main \
   --head staging \
   --title "release: YYYY-MM-DD" \
