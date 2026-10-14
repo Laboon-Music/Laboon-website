@@ -30,14 +30,24 @@ address appears in a legal document.
 
 ## Languages
 
-Only French exists. Add a language: create `content/<locale>/*.tsx` and
-register it in `LEGAL_CONTENT`. Unknown/missing locales fall back to French.
+French (`content/fr`) and English (`content/en`). The public website pages are
+French only; the app WebView picks the language with `?lang=en`. Add a
+language: create `content/<locale>/*.tsx` and register it in `LEGAL_CONTENT`.
+Unknown/missing locales fall back to French. `DocHeader` takes a `locale` prop
+for its "Version … — effective from …" line.
+
+## Versions
+
+Every document shows a version and an effective date (`*_META` in each
+component). **Bump both in the French and English file whenever the text
+changes** — the app's "documents updated" popup is driven by the version
+published in `legal_document` (Supabase). Versions are **integers**, matching the integer `version` column of
+`legal_document`. Current: version 2, 12/10/2026.
 
 ## Content status
 
-The V1 texts still contain `[à compléter]` placeholders (flagged with
-`TodoNote`) — they must be filled before the public launch. See
-[roadmap.md](../roadmap.md).
+No placeholders remain. `TodoNote` (in `_shared.tsx`) is still available to flag
+unfinished passages in a future draft.
 
 ## Add a document
 

@@ -1,11 +1,11 @@
 ---
 name: open-pr
-description: Open a GitHub pull request for the current branch on Laboon-Music/Laboon-website — conventional-commit title in English, description filled from the project's PR template, assigned to the requesting user. Use whenever the user asks to open/create a PR, submit a pull request, or push their branch for review. For a production release (staging → main), use the `release` skill instead.
+description: Open a GitHub pull request for the current branch on Laboon-Music/website — conventional-commit title in English, description filled from the project's PR template, assigned to the requesting user. Use whenever the user asks to open/create a PR, submit a pull request, or push their branch for review. For a production release (staging → main), use the `release` skill instead.
 ---
 
 # Open a pull request
 
-Opens a real PR with `gh pr create` on `Laboon-Music/Laboon-website`. It is a
+Opens a real PR with `gh pr create` on `Laboon-Music/website`. It is a
 visible, shared action: **always show the title and description and get an
 explicit yes before pushing or creating anything**, even if the user said
 "just open it".
@@ -84,7 +84,7 @@ Read the template and fill it in **as-is** — same sections, same order:
 
 ```bash
 gh pr create \
-  --repo Laboon-Music/Laboon-website \
+  --repo Laboon-Music/website \
   --base staging \
   --head <branch> \
   --title "<title>" \

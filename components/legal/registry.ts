@@ -1,9 +1,14 @@
 import type { ComponentType } from "react";
 import Cgu from "./content/fr/Cgu";
+import CguEn from "./content/en/Cgu";
 import Cgv from "./content/fr/Cgv";
+import CgvEn from "./content/en/Cgv";
 import Charte from "./content/fr/Charte";
+import CharteEn from "./content/en/Charte";
 import Confidentialite from "./content/fr/Confidentialite";
+import ConfidentialiteEn from "./content/en/Confidentialite";
 import MentionsLegales from "./content/fr/MentionsLegales";
+import MentionsLegalesEn from "./content/en/MentionsLegales";
 
 /**
  * Registry of legal documents, keyed by locale then slug. The slug is used both
@@ -11,7 +16,7 @@ import MentionsLegales from "./content/fr/MentionsLegales";
  * (`/legal/<slug>?lang=<locale>`), and must stay in sync with
  * `legal_document.slug` in Supabase.
  *
- * Only French exists today. Adding a language = create `content/<locale>/*.tsx`
+ * French and English exist. Adding a language = create `content/<locale>/*.tsx`
  * and register it in `LEGAL_CONTENT`. Missing translations fall back to
  * `DEFAULT_LOCALE`.
  */
@@ -36,8 +41,20 @@ const FR: Record<LegalSlug, LegalEntry> = {
   },
 };
 
+const EN: Record<LegalSlug, LegalEntry> = {
+  cgu: { metaTitle: "Terms of Use — Laboon", Component: CguEn },
+  cgv: { metaTitle: "Terms of Sale — Laboon", Component: CgvEn },
+  charte: { metaTitle: "Code of Conduct — Laboon", Component: CharteEn },
+  confidentialite: { metaTitle: "Privacy Policy — Laboon", Component: ConfidentialiteEn },
+  "mentions-legales": {
+    metaTitle: "Legal Notice — Laboon",
+    Component: MentionsLegalesEn,
+  },
+};
+
 export const LEGAL_CONTENT: Partial<Record<Locale, Record<LegalSlug, LegalEntry>>> = {
   fr: FR,
+  en: EN,
 };
 
 export const LEGAL_SLUGS = Object.keys(FR) as LegalSlug[];

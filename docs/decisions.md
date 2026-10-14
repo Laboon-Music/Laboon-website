@@ -106,3 +106,9 @@ changes the stack, the architecture or a convention.
 - **Texts in `content/faq.ts`** (editable without code); answers support
   `[label](address)` links through a tiny `RichText` renderer.
 - **`Disclosure`** added to the design system (native `<details>`).
+
+## 2026-10-13 — Repo renamed `Laboon-Music/website`
+
+- The `Laboon-` prefix is redundant inside the `Laboon-Music` organization.
+  GitHub redirects the old `Laboon-website` URL, so existing links, PRs and
+  clones keep working. The `laboon-website` npm package name is unchanged.

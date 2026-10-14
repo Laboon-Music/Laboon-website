@@ -1,22 +1,16 @@
-import { DocHeader, List, Section, Subheading, TodoNote } from "../../_shared";
+import { DocHeader, List, Section, Subheading } from "../../_shared";
 import { TextLink } from "@/components/ui";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const CGU_META = {
   title: "Conditions Générales d'Utilisation",
-  version: "1.0",
-  effectiveDate: "[Date de lancement]",
+  version: "2",
+  effectiveDate: "12/10/2026",
 };
-
 export default function Cgu() {
   return (
     <article className="space-y-8">
-      <DocHeader {...CGU_META} />
-
-      <TodoNote>
-        Les zones entre [crochets] sont à compléter avant toute publication.
-      </TodoNote>
-
+      <DocHeader {...CGU_META} locale="fr" />
       <div className="space-y-6 text-muted">
         <Section title="1. Objet">
           <p>
@@ -34,7 +28,6 @@ export default function Cgu() {
             les présentes CGU.
           </p>
         </Section>
-
         <Section title="2. Définitions">
           <List>
             <li>
@@ -59,7 +52,6 @@ export default function Cgu() {
             </li>
           </List>
         </Section>
-
         <Section title="3. Accès aux services">
           <p>
             L&apos;accès aux Services est réservé aux personnes physiques majeures (18 ans
@@ -67,13 +59,12 @@ export default function Cgu() {
             l&apos;accord de leurs représentants légaux.
           </p>
           <p>
-            L&apos;application Laboon est disponible gratuitement sur [App Store / Google
-            Play]. Certaines fonctionnalités avancées pourront faire l&apos;objet
+            L&apos;application Laboon est disponible gratuitement sur App Store / Google
+            Play. Certaines fonctionnalités avancées pourront faire l&apos;objet
             d&apos;une offre premium dont les conditions seront précisées dans des CGV
             spécifiques.
           </p>
         </Section>
-
         <Section title="4. Création de compte">
           <p>
             Pour accéder aux Services, l&apos;Utilisateur doit créer un compte en
@@ -89,7 +80,6 @@ export default function Cgu() {
             fausses informations ou utilisé de façon frauduleuse.
           </p>
         </Section>
-
         <Section title="5. Règles d'utilisation">
           <Subheading>L&apos;Utilisateur s&apos;engage à :</Subheading>
           <List>
@@ -129,7 +119,6 @@ export default function Cgu() {
             </li>
           </List>
         </Section>
-
         <Section title="6. Contenus publiés par les utilisateurs">
           <p>
             L&apos;Utilisateur conserve la propriété intellectuelle sur les contenus
@@ -146,7 +135,6 @@ export default function Cgu() {
             présentes CGU, sans préavis.
           </p>
         </Section>
-
         <Section title="7. Messagerie et mise en relation">
           <p>
             La messagerie interne de Laboon est un outil de mise en relation musicale.
@@ -158,7 +146,6 @@ export default function Cgu() {
             collaboration musicale effective.
           </p>
         </Section>
-
         <Section title="8. Signalement et modération">
           <p>
             Tout Utilisateur peut signaler un contenu ou comportement inapproprié via la
@@ -170,7 +157,6 @@ export default function Cgu() {
             compte).
           </p>
         </Section>
-
         <Section title="9. Disponibilité du service">
           <p>
             Laboon s&apos;efforce d&apos;assurer la disponibilité de l&apos;application
@@ -179,7 +165,6 @@ export default function Cgu() {
             temporaire des Services.
           </p>
         </Section>
-
         <Section title="10. Responsabilité">
           <p>
             Laboon agit en qualité d&apos;hébergeur des contenus publiés par les
@@ -193,7 +178,6 @@ export default function Cgu() {
             relèvent de la seule responsabilité des Utilisateurs concernés.
           </p>
         </Section>
-
         <Section title="11. Suspension et résiliation">
           <p>
             L&apos;Utilisateur peut supprimer son compte à tout moment depuis les
@@ -204,7 +188,6 @@ export default function Cgu() {
             des présentes CGU ou de comportement frauduleux.
           </p>
         </Section>
-
         <Section title="12. Modifications des CGU">
           <p>
             Laboon se réserve le droit de modifier les présentes CGU à tout moment. Les
@@ -216,19 +199,13 @@ export default function Cgu() {
             vaut acceptation des nouvelles CGU.
           </p>
         </Section>
-
         <Section title="13. Droit applicable et juridiction">
           <p>Les présentes CGU sont régies par le droit français.</p>
           <p>
             En cas de litige, et à défaut de résolution amiable, les tribunaux compétents
             du ressort de Lyon seront saisis.
           </p>
-          <p>
-            Pour tout litige de consommation, l&apos;Utilisateur peut recourir à la
-            médiation : [Nom du médiateur — à compléter].
-          </p>
         </Section>
-
         <Section title="14. Contact">
           <p>
             Pour toute question relative aux présentes CGU :{" "}
