@@ -29,7 +29,7 @@ link association files).
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | Newsletter signup (launch / beta, double opt-in) | `/`, `/api/subscribe`, `/inscription-confirmee`                                     | [newsletter-signup.md](features/newsletter-signup.md) |
 | FAQ (+ app WebView embed)                        | `/faq`, `/faq/embed`                                                                | [faq.md](features/faq.md)                             |
-| Contact form                                     | `/contact`, `/api/contact`                                                          | [contact-form.md](features/contact-form.md)           |
+| Contact form (+ app WebView embed)               | `/contact`, `/contact/embed`, `/api/contact`                                        | [contact-form.md](features/contact-form.md)           |
 | Anti-bot protection                              | both forms                                                                          | [antibot.md](features/antibot.md)                     |
 | Social links (Instagram, Facebook)               | footer, contact, confirmation                                                       | [social-links.md](features/social-links.md)           |
 | Legal documents (+ app WebView embed)            | `/cgu`, `/cgv`, `/charte`, `/confidentialite`, `/mentions-legales`, `/legal/[slug]` | [legal-documents.md](features/legal-documents.md)     |
