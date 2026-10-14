@@ -4,6 +4,7 @@
 
 - Page: `app/contact/page.tsx` (`/contact`, linked from header and footer).
 - Form: `components/contact/ContactForm.tsx`.
+- App embed: `app/contact/embed/page.tsx` (`/contact/embed`) — bare page (no site chrome, `noindex`) loaded by the mobile app in a WebView from Profile > Help, same form and same API.
 - API: `app/api/contact/route.ts` — `POST /api/contact`.
 - Subjects & limits (shared client/server): `lib/contact.ts`.
 
